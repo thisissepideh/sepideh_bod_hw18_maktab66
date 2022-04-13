@@ -1,0 +1,43 @@
+/* Webfont: Yekan */
+@font-face {
+	font-family: 'Yekan';
+	src:	url('./font/Yekan.eot'); /* IE9 Compat Modes */
+	src:	url('./font/Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('./font/Yekan.woff2') format('woff2'), /* Modern Browsers */
+			url('./font/Yekan.woff') format('woff'), /* Modern Browsers */
+			url('./font/Yekan.otf') format('opentype'), /* Open Type Font */	
+			url('./font/Yekan.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-weight: normal;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	font-display: auto;
+}
+
+
+.container{
+  text-align: center;
+  background-color: rgb(15, 62, 68);
+  color:white;
+  margin:5vh auto;
+  padding:5vh;
+  width: 50vw;
+  height: 80vh;
+  
+}
+
+.w-40{
+  width: 40%;
+}
+
+.w-50{
+  width:50%;
+}
+
+.w-100{
+  width: 100%;
+}
+
+
+input::placeholder {
+  direction: rtl;
+}

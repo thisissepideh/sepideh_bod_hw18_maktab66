@@ -1,0 +1,6 @@
+{
+  "users": [
+    {"email":"test@gmail.com", "password":"mysupersecurepassword"},
+    {"email":"test2@gmail.com","password":"1234"}
+  ]
+  }
