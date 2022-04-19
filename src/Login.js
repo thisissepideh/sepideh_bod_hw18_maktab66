@@ -17,6 +17,7 @@ import user from "./component/authContext";
 import { Formik } from 'formik';
 
 function Login(props) {
+
   const { userLogin, setUserLogin } = useContext(user);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -55,7 +56,7 @@ function Login(props) {
       return user.email == email && user.password == password;
     });
     if (isFindUser) {
-      console.log("$$$$$");
+     
       setUserLogin(isFindUser)
       //console.log(userLogin)
     }
