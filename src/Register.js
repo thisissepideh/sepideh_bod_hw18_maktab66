@@ -1,11 +1,11 @@
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import styles from "./App.module.css";
+
 import Button from "react-bootstrap/Button";
 import React, { useState, useRef, useEffect } from "react";
 
-import ReactDOM from "react-dom";
+
 
 function Register(props) {
   const education = useRef("");
@@ -27,10 +27,10 @@ function Register(props) {
         <h3 className="p-3">رایگان ثبت‌ نام کنید</h3>
         <Row>
           <Col>
-            <Form.Control placeholder="نام" />
+            <Form.Control placeholder="نام" name="firstName" />
           </Col>
           <Col>
-            <Form.Control placeholder="نام خانوادگی" />
+            <Form.Control placeholder="نام خانوادگی" name="lastName" />
           </Col>
         </Row>
         <Row className="mt-3">
@@ -40,16 +40,17 @@ function Register(props) {
                 setCity(cityElement.current.value);
               }}
               ref={cityElement}
+              name="state"
             >
               <option disabled>استان</option>
 
               {Object.entries(cities).map(([key, value]) => (
-                <option value={key}>{key}</option>
+                <option value={key} >{key}</option>
               ))}
             </Form.Select>
           </Col>
           <Col>
-            <Form.Select aria-label="Default select example">
+            <Form.Select aria-label="Default select example" name="city">
               <option disabled>شهر</option>
               {city != "" &&
                 Object.entries(cities[city]).map(([key, value]) => (
@@ -66,24 +67,25 @@ function Register(props) {
               onChange={() => {
                 setEdu(education.current.value);
               }}
+              name="education"
             />
           </Col>
 
           {edu != "" && (
             <Col>
-              <Form.Control placeholder="محل تحصیل" />
+              <Form.Control placeholder="محل تحصیل" name="university"/>
             </Col>
           )}
         </Row>
 
         <Row className="mt-3">
           <Col>
-            <Form.Control type="email" dir="auto" placeholder="پست الکترونیک" />
+            <Form.Control type="email" dir="auto" placeholder="پست الکترونیک" name="email"/>
           </Col>
         </Row>
         <Row className="mt-3">
           <Col>
-            <Form.Control type="password" placeholder="رمز عبور" />
+            <Form.Control type="password" placeholder="رمز عبور" name="password"/>
           </Col>
         </Row>
         <Row className="mb-3">

@@ -1,18 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './font/Yekan.woff'
-import './font/Yekan.woff2'
-import './font/Yekan.ttf'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
+import reportWebVitals from "./reportWebVitals";
+import "./font/Yekan.woff";
+import "./font/Yekan.woff2";
+import "./font/Yekan.ttf";
+import CheckLogin from "./component/authContext";
+import { useState } from "react";
+import ContextAdded from "./component/ContextAdded";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ContextAdded />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
